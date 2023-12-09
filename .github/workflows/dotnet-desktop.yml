@@ -66,21 +66,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
-    - name: Microsoft.AspNetCore.OpenApi
-      run: dotnet add package Microsoft.AspNetCore.OpenApi --version 7.0.11
-
-    - name: Install Microsoft.EntityFrameworkCore
-      run: dotnet add package Microsoft.EntityFrameworkCore --version 7.0.14
-
-    - name: Install Microsoft.EntityFrameworkCore.SqlServer
-      run: dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 7.0.14
-
-    - name: Microsoft.EntityFrameworkCore.Tools
-      run: dotnet add package Microsoft.EntityFrameworkCore.Tools --version 7.0.14
-
-    - name: Swashbuckle.AspNetCore
-      run: dotnet add package Swashbuckle.AspNetCore --version 6.5.0
-
+        
     # Install the .NET Core workload
     - name: Install .NET Core
       uses: actions/setup-dotnet@v3
@@ -127,3 +113,18 @@ jobs:
       with:
         name: MSIX Package
         path: ${{ env.Wap_Project_Directory }}\AppPackages
+
+    - name: Microsoft.AspNetCore.OpenApi
+      run: dotnet add package Microsoft.AspNetCore.OpenApi --version 7.0.11
+
+    - name: Install Microsoft.EntityFrameworkCore
+      run: dotnet add package Microsoft.EntityFrameworkCore --version 7.0.14
+
+    - name: Install Microsoft.EntityFrameworkCore.SqlServer
+      run: dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 7.0.14
+
+    - name: Microsoft.EntityFrameworkCore.Tools
+      run: dotnet add package Microsoft.EntityFrameworkCore.Tools --version 7.0.14
+
+    - name: Swashbuckle.AspNetCore
+      run: dotnet add package Swashbuckle.AspNetCore --version 6.5.0
