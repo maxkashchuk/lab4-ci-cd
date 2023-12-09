@@ -112,7 +112,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: MSIX Package
-        path: ${{ env.Wap_Project_Directory }}\AppPackages
+        path: ~/.nuget/packages
 
     - name: Microsoft.AspNetCore.OpenApi
       run: dotnet add package Microsoft.AspNetCore.OpenApi --version 7.0.11
