@@ -114,6 +114,9 @@ jobs:
       with:
         dotnet-version: '7.0.x'
 
+    - name: Restore NuGet Packages
+      run: dotnet restore --packages ~/.nuget/pckages
+
     - name: Microsoft.AspNetCore.OpenApi
       run: dotnet add package Microsoft.AspNetCore.OpenApi --version 7.0.11
 
